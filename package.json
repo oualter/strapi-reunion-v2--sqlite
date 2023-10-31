@@ -10,12 +10,11 @@
     "strapi": "strapi",
     "prebuild": "cd src/plugins/image-pinpoint-generator && npm run build"
   },
-  "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.14.4",
-    "@strapi/plugin-users-permissions": "4.14.4",
     "@strapi/plugin-i18n": "4.14.4",
-    "better-sqlite3": "8.6.0"
+    "@strapi/plugin-users-permissions": "4.14.4",
+    "@strapi/strapi": "4.14.4",
+    "better-sqlite3": "^8.6.0"
   },
   "author": {
     "name": "Olivier"
