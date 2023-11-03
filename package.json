@@ -11,14 +11,14 @@
     "prebuild": "cd src/plugins/image-pinpoint-generator && npm run build"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.15.0",
-    "@strapi/plugin-users-permissions": "4.15.0",
-    "@strapi/strapi": "4.15.0",
+    "@strapi/plugin-i18n": "4.14.6",
+    "@strapi/plugin-users-permissions": "4.14.6",
+    "@strapi/strapi": "4.14.6",
     "node": "18.x",
     "sqlite3": "^5.1.6",
-    "strapi": "^3.6.11",
     "strapi-plugin-import-export-entries": "^1.21.1",
-    "strapi-plugin-vercel-deploy": "^1.4.0"
+    "strapi-plugin-vercel-deploy": "^1.4.0",
+    "strapi-utils": "^3.6.11"
   },
   "author": {
     "name": "Olivier"
