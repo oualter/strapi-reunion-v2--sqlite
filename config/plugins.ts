@@ -6,4 +6,7 @@ export default {
   "import-export-entries": {
     enabled: true,
   },
+  "vercel-deploy": {
+    enabled: true,
+  },
 };
