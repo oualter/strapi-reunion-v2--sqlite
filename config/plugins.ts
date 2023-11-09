@@ -1,13 +1,13 @@
 export default {
   "image-pinpoint-generator": {
-    enabled: true,
+    enabled: false,
     resolve: "./src/plugins/image-pinpoint-generator",
   },
   "import-export-entries": {
     enabled: true,
   },
   "vercel-deploy": {
-    enabled: true,
+    enabled: false,
     config: {
     //   deployHook:        "https://api.vercel.com/v1/integrations/deploy/prj_<deploy-hook>",
       apiToken: "lRIoQ1CYY0gA64iC6shBxbFU",

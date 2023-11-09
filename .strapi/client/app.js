@@ -6,7 +6,6 @@ import i18N from "@strapi/plugin-i18n/strapi-admin";
 import usersPermissions from "@strapi/plugin-users-permissions/strapi-admin";
 import importExportEntries from "strapi-plugin-import-export-entries/strapi-admin";
 import vercelDeploy from "strapi-plugin-vercel-deploy/strapi-admin";
-import imagePinpointGenerator from "....srcpluginsimage-pinpoint-generator/strapi-admin";
 import { renderAdmin } from "@strapi/strapi/admin";
 
 renderAdmin(document.getElementById("strapi"), {
@@ -15,6 +14,5 @@ renderAdmin(document.getElementById("strapi"), {
     "users-permissions": usersPermissions,
     "import-export-entries": importExportEntries,
     "vercel-deploy": vercelDeploy,
-    "image-pinpoint-generator": imagePinpointGenerator,
   },
 });
