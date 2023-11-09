@@ -1,20 +1,24 @@
 {
   "name": "reunions",
-  "private": true,
   "version": "0.2.0",
+  "private": true,
   "description": "A Strapi application",
+  "license": "MIT",
+  "author": {
+    "name": "Olivier"
+  },
   "scripts": {
+    "prebuild": "cd src/plugins/image-pinpoint-generator && npm run build",
+    "build": "strapi build",
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi",
-    "prebuild": "cd src/plugins/image-pinpoint-generator && npm run build"
+    "strapi": "strapi"
   },
   "dependencies": {
     "@strapi/plugin-i18n": "^4.15.2",
     "@strapi/plugin-users-permissions": "^4.15.2",
     "@strapi/strapi": "^4.15.2",
-    "node": "16.x",
+    "node": "~16.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.3.4",
@@ -26,15 +30,11 @@
     "strapi-plugin-vercel-deploy": "^1.4.0",
     "styled-components": "^5.3.11"
   },
-  "author": {
-    "name": "Olivier"
+  "engines": {
+    "node": "~16.16.0",
+    "npm": ">=6.0.0"
   },
   "strapi": {
     "uuid": "4799905b-f36e-4681-97ac-944be17efbdc"
-  },
-  "engines": {
-    "node": "16.16.0",
-    "npm": ">=6.0.0"
-  },
-  "license": "MIT"
+  }
 }
