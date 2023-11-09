@@ -8,7 +8,6 @@
     "name": "Olivier"
   },
   "scripts": {
-    // "prebuild": "cd src/plugins/image-pinpoint-generator && npm run build",
     "build": "strapi build",
     "develop": "strapi develop",
     "start": "strapi start",
