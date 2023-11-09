@@ -11,14 +11,19 @@
     "prebuild": "cd src/plugins/image-pinpoint-generator && npm run build"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.14.6",
+    "@strapi/plugin-i18n": "^4.15.2",
     "@strapi/plugin-users-permissions": "4.14.6",
-    "@strapi/strapi": "4.14.6",
+    "@strapi/strapi": "^4.15.2",
     "node": "16.x",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.18.0",
     "sharp": "^0.32.6",
     "sqlite3": "^5.1.6",
+    "strapi": "^3.6.11",
     "strapi-plugin-import-export-entries": "^1.21.1",
-    "strapi-plugin-vercel-deploy": "^1.4.0"
+    "strapi-plugin-vercel-deploy": "^1.4.0",
+    "styled-components": "^6.1.1"
   },
   "author": {
     "name": "Olivier"
@@ -27,7 +32,7 @@
     "uuid": "4799905b-f36e-4681-97ac-944be17efbdc"
   },
   "engines": {
-    "node": "16.x",
+    "node": "16.16.0",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
