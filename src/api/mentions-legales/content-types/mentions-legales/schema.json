@@ -11,8 +11,11 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "Titre": {
+      "type": "string"
+    },
     "Contenu": {
-      "type": "richtext"
+      "type": "blocks"
     }
   }
 }

@@ -32,12 +32,6 @@
         "audios"
       ]
     },
-    "geoloc": {
-      "type": "dynamiczone",
-      "components": [
-        "x.xy"
-      ]
-    },
     "Mois": {
       "type": "string",
       "required": true

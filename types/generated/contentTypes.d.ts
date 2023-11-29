@@ -682,12 +682,13 @@ export interface ApiAProposAPropos extends Schema.SingleType {
   info: {
     singularName: 'a-propos';
     pluralName: 'a-proposs';
-    displayName: 'A propos';
+    displayName: '\u00C0 propos';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
+    Titre: Attribute.String;
     Contenu: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -718,6 +719,7 @@ export interface ApiContactContact extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
+    Titre: Attribute.String;
     Contenu: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -737,31 +739,33 @@ export interface ApiContactContact extends Schema.SingleType {
   };
 }
 
-export interface ApiLeLivrePdfLeLivrePdf extends Schema.SingleType {
-  collectionName: 'le_livre_pdfs';
+export interface ApiLeLivreLeLivre extends Schema.SingleType {
+  collectionName: 'les_livres';
   info: {
-    singularName: 'le-livre-pdf';
-    pluralName: 'le-livre-pdfs';
-    displayName: 'Le livre (PDF)';
+    singularName: 'le-livre';
+    pluralName: 'les-livres';
+    displayName: 'Le livre';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
+    Titre: Attribute.String;
     Contenu: Attribute.Blocks;
-    Couverture: Attribute.Media;
-    Contenu_2: Attribute.Blocks;
+    Illustration: Attribute.Media;
+    contenu_2: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::le-livre-pdf.le-livre-pdf',
+      'api::le-livre.le-livre',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::le-livre-pdf.le-livre-pdf',
+      'api::le-livre.le-livre',
       'oneToOne',
       'admin::user'
     > &
@@ -780,7 +784,8 @@ export interface ApiMentionsLegalesMentionsLegales extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    Contenu: Attribute.RichText;
+    Titre: Attribute.String;
+    Contenu: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -815,7 +820,6 @@ export interface ApiPlaceDeLaReunionPlaceDeLaReunion
     Annee: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<2023>;
     Texte_microfiction: Attribute.Blocks & Attribute.Required;
     illustration: Attribute.Media;
-    geoloc: Attribute.DynamicZone<['x.xy']>;
     Mois: Attribute.String & Attribute.Required;
     Jour_du_mois: Attribute.Integer &
       Attribute.Required &
@@ -858,7 +862,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::a-propos.a-propos': ApiAProposAPropos;
       'api::contact.contact': ApiContactContact;
-      'api::le-livre-pdf.le-livre-pdf': ApiLeLivrePdfLeLivrePdf;
+      'api::le-livre.le-livre': ApiLeLivreLeLivre;
       'api::mentions-legales.mentions-legales': ApiMentionsLegalesMentionsLegales;
       'api::place-de-la-reunion.place-de-la-reunion': ApiPlaceDeLaReunionPlaceDeLaReunion;
     }
